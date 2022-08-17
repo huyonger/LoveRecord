@@ -4,12 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>YongHu Love YuYingMa</title>
-		<link rel="stylesheet" href="./css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="./css/main.css" />
+		<!-- Latest compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+			integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
 	</head>
 
 	<body>
-		<audio src="./bgm.mp3" autoplay="true" loop="loop"></audio>
+		<div class="guangp" id="music">
+			<audio
+				controls
+				src="./bgm.mp3"
+				id="audio"
+				loop="loop"
+				style="display: none"
+			></audio>
+			<i class="guxz" id="i_1"></i>
+			<i class="dy"></i>
+			<i class="xy"></i>
+			<i class="gp audio-stick" id="i_2"></i>
+		</div>
 		<div id="back">
 			<div class="mask"></div>
 			<div
@@ -181,15 +199,27 @@
 						<p>days/hours/min/sec</p>
 						<p
 							class="text-center"
-							style="color: #a94442; font-size: 17px"
+							style="
+								color: #a94442;
+								font-size: 17px;
+								line-height: 22px;
+							"
 							id="say"
 						></p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
-		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+			integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+			crossorigin="anonymous"
+		></script>
 		<script type="text/javascript" src="./js/count-time.js"></script>
 		<script>
 			$(function () {
@@ -248,6 +278,26 @@
 					};
 					setInterval(_play, rate);
 				})();
+
+				var audio = document.getElementById("audio");
+				var music = document.getElementById("music");
+				var i_1 = document.getElementById("i_1");
+				var i_2 = document.getElementById("i_2");
+				var isPlay = false;
+
+				music.addEventListener("click", () => {
+					if (!isPlay) {
+						audio.play();
+						isPlay = true;
+						i_1.classList.add("xuanz");
+						i_2.classList.add("skewing");
+					} else {
+						audio.pause();
+						isPlay = false;
+						i_1.classList.remove("xuanz");
+						i_2.classList.remove("skewing");
+					}
+				});
 			});
 		</script>
 	</body>

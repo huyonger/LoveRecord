@@ -77,3 +77,67 @@
   .time-font {
       color: #fff;
   }
+
+  .guangp {
+    position: fixed;
+    display: inline-block;
+    padding-top: 80px;
+    padding-bottom: 70px;
+    width: 355px;
+    height: 321px;
+    text-align: center;
+    right: 10%;
+    bottom: 10%;
+    z-index: 1200;
+}
+ .guangp .guxz {
+    display: inline-block;
+    width: 359px;
+    height: 359px;
+    background: url(../img/music2.png);
+}
+.guangp .dy {
+    position: absolute;
+    top: 71px;
+    right: -109px;
+    width: 85px;
+    height: 82px;
+    background: url(../img/music1.png) no-repeat -356px -18px;
+}
+.guangp .xy {
+    position: absolute;
+    top: 71px;
+    right: -108px;
+    z-index: 3;
+    width: 85px;
+    height: 85px;
+    background: url(../img/music1.png) no-repeat -450px -18px;
+}
+.guangp .gp {
+    position: absolute;
+    top: 115px;
+    right: -70px;
+    width: 173px;
+    height: 272px;
+    background: url(../img/music1.png) no-repeat -350px -138px;
+    transition: all .6s ease-in-out;
+    transform: rotate(-32deg);
+    transform-origin: right top;
+}
+
+/* 黑胶旋转 */
+.guangp .xuanz {
+    animation: circleRoate 200s;
+    animation-timing-function: linear;
+}
+.guangp .gp.skewing {
+    transform: rotate(0);
+}
+@keyframes circleRoate{
+    from{
+        transform:rotate(0) infinite
+    }
+    to{
+        transform:rotate(7600deg)
+    }
+}
