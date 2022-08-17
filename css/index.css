@@ -94,7 +94,7 @@
     display: inline-block;
     width: 359px;
     height: 359px;
-    background: url(../img/music2.png);
+    background: url(https://cdn.imyoyo.xyz/love-record/img/music2.png);
 }
 .guangp .dy {
     position: absolute;
@@ -102,7 +102,7 @@
     right: -109px;
     width: 85px;
     height: 82px;
-    background: url(../img/music1.png) no-repeat -356px -18px;
+    background: url(https://cdn.imyoyo.xyz/love-record/img/music1.png) no-repeat -356px -18px;
 }
 .guangp .xy {
     position: absolute;
@@ -111,7 +111,7 @@
     z-index: 3;
     width: 85px;
     height: 85px;
-    background: url(../img/music1.png) no-repeat -450px -18px;
+    background: url(https://cdn.imyoyo.xyz/love-record/img/music1.png) no-repeat -450px -18px;
 }
 .guangp .gp {
     position: absolute;
@@ -119,7 +119,7 @@
     right: -70px;
     width: 173px;
     height: 272px;
-    background: url(../img/music1.png) no-repeat -350px -138px;
+    background: url(https://cdn.imyoyo.xyz/love-record/img/music1.png) no-repeat -350px -138px;
     transition: all .6s ease-in-out;
     transform: rotate(-32deg);
     transform-origin: right top;
