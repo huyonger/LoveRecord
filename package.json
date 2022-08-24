@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "upload-file-cos": "^1.0.4"
+    "upload-file-cos": "^1.0.7"
   },
   "scripts": {
     "upload":"upload-file-cos"

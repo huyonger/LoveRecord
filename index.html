@@ -299,17 +299,16 @@
 				});
 				var musicList = [];
 				musicList.push(
-					"upload/https://cdn.imyoyo.xyz/love-record/mp3/bgm1.mp3"
+					"https://cdn.imyoyo.xyz/love-record/mp3/bgm1.mp3"
 				);
 				musicList.push(
-					"upload/https://cdn.imyoyo.xyz/love-record/mp3/bgm2.mp3"
+					"https://cdn.imyoyo.xyz/love-record/mp3/bgm2.mp3"
 				);
 				audio.addEventListener("ended", () => {
 					var m = musicList.shift();
 					musicList.push(m);
 					audio.src = musicList[0];
 					audio.play();
-					console.log("ended");
 				});
 			});
 		</script>
