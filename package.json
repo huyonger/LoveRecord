@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "upload-file-cos": "^1.0.4"
+  },
+  "scripts": {
+    "upload":"upload-file-cos"
+  }
+}

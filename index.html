@@ -18,9 +18,8 @@
 		<div class="guangp" id="music">
 			<audio
 				controls
-				src="https://cdn.imyoyo.xyz/love-record/bgm.mp3"
+				src="https://cdn.imyoyo.xyz/love-record/mp3/bgm1.mp3"
 				id="audio"
-				loop="loop"
 				style="display: none"
 			></audio>
 			<i class="guxz" id="i_1"></i>
@@ -257,7 +256,7 @@
 					"杭州，钱塘江。没有看见70cm的大潮，大失所望。但是你在身边，便是最好的风景。",
 					"杭州，银泰百货。第一次玩游戏机，有意思耶。",
 					"杭州，银泰百货。意料之外的惊喜，果然是“转角遇见它”。",
-					"杭州。别的不说，Apple 店里冷气真足，夏天乘凉必去。（喜欢上iPhone 了）",
+					"杭州，别的不说，Apple 店里冷气真足，夏天乘凉必去。（喜欢上iPhone 了）",
 					"杭州，韩式烤肉。不得不说，吃货两次光顾的小店还是非常nice滴，烤肉小哥真的服务不要太好。馋哭！",
 					"嘉兴，乌镇。梦中的江南水乡便是乌镇的样子。",
 					"嘉兴，乌镇。一张明信片写下了我们对未来的期许。",
@@ -297,6 +296,20 @@
 						i_1.classList.remove("xuanz");
 						i_2.classList.remove("skewing");
 					}
+				});
+				var musicList = [];
+				musicList.push(
+					"upload/https://cdn.imyoyo.xyz/love-record/mp3/bgm1.mp3"
+				);
+				musicList.push(
+					"upload/https://cdn.imyoyo.xyz/love-record/mp3/bgm2.mp3"
+				);
+				audio.addEventListener("ended", () => {
+					var m = musicList.shift();
+					musicList.push(m);
+					audio.src = musicList[0];
+					audio.play();
+					console.log("ended");
 				});
 			});
 		</script>
